@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22399040471AB0302B759D88 /* Pods_CupidCook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D4B7CB3DC4AB3B4D598E7EC /* Pods_CupidCook.framework */; };
+		6386BE9E30EE6289543BB30E /* Pods_CupidCook_CupidCookUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A355E903B1626B94B7FE200B /* Pods_CupidCook_CupidCookUITests.framework */; };
+		8046CA51ABB77ECE349D441F /* Pods_CupidCookTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB6C4D371ACAA0CF91D379D6 /* Pods_CupidCookTests.framework */; };
 		F2A67C3229089CAC00E29089 /* CupidCookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A67C3129089CAC00E29089 /* CupidCookApp.swift */; };
 		F2A67C3429089CAC00E29089 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A67C3329089CAC00E29089 /* ContentView.swift */; };
 		F2A67C3629089CAC00E29089 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2A67C3529089CAC00E29089 /* Assets.xcassets */; };
@@ -34,6 +37,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D4B7CB3DC4AB3B4D598E7EC /* Pods_CupidCook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CupidCook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C62E9A2BEA206F8C653E2E8 /* Pods-CupidCookTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CupidCookTests.release.xcconfig"; path = "Target Support Files/Pods-CupidCookTests/Pods-CupidCookTests.release.xcconfig"; sourceTree = "<group>"; };
+		5EC2AB56D0916A227C16B665 /* Pods-CupidCookTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CupidCookTests.debug.xcconfig"; path = "Target Support Files/Pods-CupidCookTests/Pods-CupidCookTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7F3A01C7B8C705CEAFFBEAE2 /* Pods-CupidCook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CupidCook.release.xcconfig"; path = "Target Support Files/Pods-CupidCook/Pods-CupidCook.release.xcconfig"; sourceTree = "<group>"; };
+		908E597133E1168A7CFB823F /* Pods-CupidCook-CupidCookUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CupidCook-CupidCookUITests.debug.xcconfig"; path = "Target Support Files/Pods-CupidCook-CupidCookUITests/Pods-CupidCook-CupidCookUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A355E903B1626B94B7FE200B /* Pods_CupidCook_CupidCookUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CupidCook_CupidCookUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC8DF662A819CB69E2E295BB /* Pods-CupidCook-CupidCookUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CupidCook-CupidCookUITests.release.xcconfig"; path = "Target Support Files/Pods-CupidCook-CupidCookUITests/Pods-CupidCook-CupidCookUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E1FAF0203227674EA9982738 /* Pods-CupidCook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CupidCook.debug.xcconfig"; path = "Target Support Files/Pods-CupidCook/Pods-CupidCook.debug.xcconfig"; sourceTree = "<group>"; };
+		EB6C4D371ACAA0CF91D379D6 /* Pods_CupidCookTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CupidCookTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2A67C2E29089CAC00E29089 /* CupidCook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CupidCook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2A67C3129089CAC00E29089 /* CupidCookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupidCookApp.swift; sourceTree = "<group>"; };
 		F2A67C3329089CAC00E29089 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22399040471AB0302B759D88 /* Pods_CupidCook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8046CA51ABB77ECE349D441F /* Pods_CupidCookTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,12 +79,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6386BE9E30EE6289543BB30E /* Pods_CupidCook_CupidCookUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0FC8771448947F5797D2FDCC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E1FAF0203227674EA9982738 /* Pods-CupidCook.debug.xcconfig */,
+				7F3A01C7B8C705CEAFFBEAE2 /* Pods-CupidCook.release.xcconfig */,
+				908E597133E1168A7CFB823F /* Pods-CupidCook-CupidCookUITests.debug.xcconfig */,
+				DC8DF662A819CB69E2E295BB /* Pods-CupidCook-CupidCookUITests.release.xcconfig */,
+				5EC2AB56D0916A227C16B665 /* Pods-CupidCookTests.debug.xcconfig */,
+				3C62E9A2BEA206F8C653E2E8 /* Pods-CupidCookTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7CAE0F2EAC48C887F3811962 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D4B7CB3DC4AB3B4D598E7EC /* Pods_CupidCook.framework */,
+				A355E903B1626B94B7FE200B /* Pods_CupidCook_CupidCookUITests.framework */,
+				EB6C4D371ACAA0CF91D379D6 /* Pods_CupidCookTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F2A67C2529089CAC00E29089 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +117,8 @@
 				F2A67C4129089CAD00E29089 /* CupidCookTests */,
 				F2A67C4B29089CAD00E29089 /* CupidCookUITests */,
 				F2A67C2F29089CAC00E29089 /* Products */,
+				0FC8771448947F5797D2FDCC /* Pods */,
+				7CAE0F2EAC48C887F3811962 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,9 +175,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F2A67C5229089CAD00E29089 /* Build configuration list for PBXNativeTarget "CupidCook" */;
 			buildPhases = (
+				9749DCFD352F1A872333867B /* [CP] Check Pods Manifest.lock */,
 				F2A67C2A29089CAC00E29089 /* Sources */,
 				F2A67C2B29089CAC00E29089 /* Frameworks */,
 				F2A67C2C29089CAC00E29089 /* Resources */,
+				392033CF5A230E4D176AD00A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,6 +194,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F2A67C5529089CAD00E29089 /* Build configuration list for PBXNativeTarget "CupidCookTests" */;
 			buildPhases = (
+				7062F157125C11514F7C56C5 /* [CP] Check Pods Manifest.lock */,
 				F2A67C3A29089CAD00E29089 /* Sources */,
 				F2A67C3B29089CAD00E29089 /* Frameworks */,
 				F2A67C3C29089CAD00E29089 /* Resources */,
@@ -169,9 +213,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F2A67C5829089CAD00E29089 /* Build configuration list for PBXNativeTarget "CupidCookUITests" */;
 			buildPhases = (
+				F8353E8AA58263E3F3803891 /* [CP] Check Pods Manifest.lock */,
 				F2A67C4429089CAD00E29089 /* Sources */,
 				F2A67C4529089CAD00E29089 /* Frameworks */,
 				F2A67C4629089CAD00E29089 /* Resources */,
+				E812BD0CDC42988E78B557FC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -251,6 +297,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		392033CF5A230E4D176AD00A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CupidCook/Pods-CupidCook-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CupidCook/Pods-CupidCook-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CupidCook/Pods-CupidCook-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7062F157125C11514F7C56C5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CupidCookTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9749DCFD352F1A872333867B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CupidCook-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E812BD0CDC42988E78B557FC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CupidCook-CupidCookUITests/Pods-CupidCook-CupidCookUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CupidCook-CupidCookUITests/Pods-CupidCook-CupidCookUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CupidCook-CupidCookUITests/Pods-CupidCook-CupidCookUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8353E8AA58263E3F3803891 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CupidCook-CupidCookUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F2A67C2A29089CAC00E29089 /* Sources */ = {
@@ -411,6 +560,7 @@
 		};
 		F2A67C5329089CAD00E29089 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1FAF0203227674EA9982738 /* Pods-CupidCook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -440,6 +590,7 @@
 		};
 		F2A67C5429089CAD00E29089 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F3A01C7B8C705CEAFFBEAE2 /* Pods-CupidCook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -469,6 +620,7 @@
 		};
 		F2A67C5629089CAD00E29089 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EC2AB56D0916A227C16B665 /* Pods-CupidCookTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -489,6 +641,7 @@
 		};
 		F2A67C5729089CAD00E29089 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C62E9A2BEA206F8C653E2E8 /* Pods-CupidCookTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -509,6 +662,7 @@
 		};
 		F2A67C5929089CAD00E29089 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 908E597133E1168A7CFB823F /* Pods-CupidCook-CupidCookUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -527,6 +681,7 @@
 		};
 		F2A67C5A29089CAD00E29089 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC8DF662A819CB69E2E295BB /* Pods-CupidCook-CupidCookUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

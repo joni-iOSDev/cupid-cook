@@ -6,7 +6,9 @@ target 'CupidCook' do
   use_frameworks!
 
   # Pods for CupidCook
-
+  pod 'Swinject'
+  pod 'Alamofire'
+  
   target 'CupidCookTests' do
     inherit! :search_paths
     # Pods for testing
