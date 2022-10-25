@@ -96,7 +96,6 @@
 				5EC2AB56D0916A227C16B665 /* Pods-CupidCookTests.debug.xcconfig */,
 				3C62E9A2BEA206F8C653E2E8 /* Pods-CupidCookTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -108,6 +107,14 @@
 				EB6C4D371ACAA0CF91D379D6 /* Pods_CupidCookTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F24E21BE2908A585007B8600 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F2A67C3529089CAC00E29089 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		F2A67C2529089CAC00E29089 = {
@@ -135,9 +142,9 @@
 		F2A67C3029089CAC00E29089 /* CupidCook */ = {
 			isa = PBXGroup;
 			children = (
+				F24E21BE2908A585007B8600 /* Resources */,
 				F2A67C3129089CAC00E29089 /* CupidCookApp.swift */,
 				F2A67C3329089CAC00E29089 /* ContentView.swift */,
-				F2A67C3529089CAC00E29089 /* Assets.xcassets */,
 				F2A67C3729089CAD00E29089 /* Preview Content */,
 			);
 			path = CupidCook;
