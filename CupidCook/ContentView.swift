@@ -14,6 +14,15 @@ struct ContentView: View {
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
             Text("Hello, world!")
+        }.onAppear {
+            NetworkManager().getRandomRecipies { result in
+                switch result {
+                case .success(let success):
+                    print("123 success")
+                case .failure(let failure):
+                    print("123 failure")
+                }
+            }
         }
         .padding()
     }
