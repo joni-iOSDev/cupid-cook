@@ -12,13 +12,14 @@ protocol NetworkManagerProtocol {
     func getRandomRecipies(with params: RandomRecipesParameters,_ completionHandler: @escaping (Result<[RecipeModel]?, NetworkError>) -> Void)
     func getRandomRecipies(with params: RandomRecipesParameters) async -> Result<[RecipeModel], NetworkError>
     func searcRecipe(with params: SearchRecipeParameters) async -> Result<[RecipeResult], NetworkError>
+    func getRecipe(with id: Int, params: GetRecipeParameters) async -> Result<RecipeModel, NetworkError>
 }
 
 struct NetworkManager: NetworkManagerProtocol {
     
     private let routerFoodAPI = Router<SpoonacularAPI>()
 
-    static let environment: NetworkEnvironment = .production
+    static let environment: NetworkEnvironment = .mock
     
     func getRandomRecipies(with params: RandomRecipesParameters = .init()
                            ,_ completionHandler: @escaping (Result<[RecipeModel]?, NetworkError>) -> Void) {
@@ -58,6 +59,17 @@ struct NetworkManager: NetworkManagerProtocol {
             return .success(recipes)
         case .failure(_):
             return .failure(.unwrapperError)
+        }
+    }
+    
+    func getRecipe(with id: Int, params: GetRecipeParameters) async -> Result<RecipeModel, NetworkError> {
+        let result = await routerFoodAPI.request(expectedData: RecipeModel.self, from: .recipeInformation(id, params: params))
+        
+        switch result {
+        case .success(let success):
+            return .success(success)
+        case .failure(_):
+            return .failure(.failWithQuery)
         }
     }
 }

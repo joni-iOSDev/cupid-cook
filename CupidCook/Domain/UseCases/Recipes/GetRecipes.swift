@@ -22,10 +22,6 @@ class GetRecipes: GetRecipesUseCaseProtocol {
             return .success(success)
         case .failure(_):
             // TODO: Validate errors
-//            if failure == .unwrapperError {
-//                return .failure(.retry)
-//            }
-//
             return .failure(.retry)
         }
     }
@@ -37,10 +33,6 @@ class GetRecipes: GetRecipesUseCaseProtocol {
             return .success(success)
         case .failure(let failure):
             // TODO: Validate errors
-//            if failure == .unwrapperError {
-//                return .failure(.retry)
-//            }
-//
             if failure == .emptyDisk {
                 return .failure(.isEmpty)
             }
@@ -55,13 +47,19 @@ class GetRecipes: GetRecipesUseCaseProtocol {
             return .success(success)
         case .failure(_):
             // TODO: Validate errors
-//            if failure == .unwrapperError {
-//                return .failure(.retry)
-//            }
-//
             return .failure(.retry)
         }
     }
     
-  
+    func executeGetRecipe(id: Int) async -> Result<RecipeModel, DiscoverRecipeError> {
+        let result = await recipeRepository.getRecipe(id: id)
+        
+        switch result {
+        case .success(let success):
+            return .success(success)
+        case .failure(_):
+            // TODO: Validate errors
+            return .failure(.retry)
+        }
+    }
 }

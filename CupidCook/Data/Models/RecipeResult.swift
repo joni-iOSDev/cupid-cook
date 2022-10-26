@@ -12,10 +12,10 @@ class RecipeResult: Codable {
     let id: Int
     let title: String?
     let image: String?
-    let imageType: ImageType?
+    let imageType: String?
     let nutrition: Nutrition?
 
-    init(id: Int, title: String?, image: String?, imageType: ImageType?, nutrition: Nutrition?) {
+    init(id: Int, title: String?, image: String?, imageType: String?, nutrition: Nutrition?) {
         self.id = id
         self.title = title
         self.image = image

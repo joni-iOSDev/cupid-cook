@@ -13,23 +13,26 @@ struct FavoriteRecipesView: View {
     @ObservedObject var viewModel: FavoriteRecipesViewModel = .init(getRecipesUseCase: DependencyInjectionResolver.shared.resolve(GetRecipesUseCaseProtocol.self))
     
     var body: some View {
-        NavigationView {
             List {
                 ForEach(viewModel.favorites, id: \.self) { favorite in
-                    HStack {
-                        AsyncImage(url: favorite.getImageURL()) { recipeImg in
-                            recipeImg
-                                .resizable()
-                                .frame(width: 60, height: 60)
-                                .aspectRatio(contentMode: .fit)
-                                .scaledToFill()
-                                .cornerRadius(15)
+                    NavigationLink {
+                        RecipeDetailView(recipeId: favorite.id)
+                    } label: {
+                        HStack {
+                            AsyncImage(url: favorite.getImageURL()) { recipeImg in
+                                recipeImg
+                                    .resizable()
+                                    .frame(width: 60, height: 60)
+                                    .aspectRatio(contentMode: .fit)
+                                    .scaledToFill()
+                                    .cornerRadius(15)
+                                
+                            } placeholder: {
+                                ProgressView()
+                            }
                             
-                        } placeholder: {
-                            ProgressView()
+                            Text(favorite.getTitle())
                         }
-                        
-                        Text(favorite.getTitle())
                     }
                 }
                 
@@ -41,7 +44,7 @@ struct FavoriteRecipesView: View {
                 fetchFavorites()
             }
             .navigationTitle("Favorites")
-        }
+        
 
     }
     

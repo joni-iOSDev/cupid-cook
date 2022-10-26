@@ -11,4 +11,5 @@ protocol GetRecipesUseCaseProtocol {
     func executeGetRadom() async -> Result<[RecipeModel], DiscoverRecipeError>
     func executeGetFavoorites() async -> Result<[RecipeModel], DiscoverRecipeError>
     func executeGetLikes() async -> Result<[RecipeModel], DiscoverRecipeError>
+    func executeGetRecipe(id: Int) async -> Result<RecipeModel, DiscoverRecipeError>
 }

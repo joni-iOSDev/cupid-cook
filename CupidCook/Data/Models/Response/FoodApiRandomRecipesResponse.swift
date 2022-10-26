@@ -49,44 +49,6 @@ extension FoodAPIRandomRecipesResponse {
     }
 }
 
-
-enum Unit: String, Codable {
-    case celsius = "Celsius"
-    case fahrenheit = "Fahrenheit"
-    case minutes = "minutes"
-}
-
-
-enum CreditsText: String, Codable {
-    case afrolems = "Afrolems"
-    case blogspotCOM = "blogspot.com"
-    case foodistaCOM = "foodista.com"
-    case foodistaCOMTheCookingEncyclopediaEveryoneCanEdit = "Foodista.com – The Cooking Encyclopedia Everyone Can Edit"
-    case jenWest = "Jen West"
-}
-
-enum Gaps: String, Codable {
-    case no = "no"
-}
-
-enum ImageType: String, Codable {
-    case jpg = "jpg"
-    case png = "png"
-}
-
-enum License: String, Codable {
-    case ccBy30 = "CC BY 3.0"
-    case ccBy40 = "CC BY 4.0"
-}
-
-enum SourceName: String, Codable {
-    case afrolems = "Afrolems"
-    case blogspotCOM = "blogspot.com"
-    case foodista = "Foodista"
-    case foodistaCOM = "foodista.com"
-    case pinkWhen = "Pink When"
-}
-
 // MARK: - Helper functions for creating encoders and decoders
 
 func newJSONDecoder() -> JSONDecoder {

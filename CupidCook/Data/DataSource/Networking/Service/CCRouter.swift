@@ -12,7 +12,7 @@ public typealias NetworkRouterCompletion<GenericObject: Decodable> = (_ response
 
 class Router<EndPoint: EndPointType>: NetworkRouterProtocol {
     private var task: URLSessionTask?
-    let secretParam = ["apiKey":"1a50f6bc70db47a599b590b9838d55c3"]
+    let secretParam = ["apiKey":"69659d93063244e2a61e21d7197955c6"]
 
     func request<GenericObject: Decodable>(expectedData: GenericObject.Type,from route: EndPoint, completion: @escaping NetworkRouterCompletion<GenericObject>) {
         

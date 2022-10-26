@@ -7,11 +7,11 @@ class RecipeModel: Codable, Hashable {
     let veryHealthy, cheap, veryPopular, sustainable: Bool?
     let lowFodmap: Bool?
     let weightWatcherSmartPoints: Int?
-    let gaps: Gaps?
+    let gaps: String?
     let preparationMinutes, cookingMinutes, aggregateLikes, healthScore: Int?
-    let creditsText: CreditsText?
-    let license: License?
-    let sourceName: SourceName?
+    let creditsText: String?
+    let license: String?
+    let sourceName: String?
     let pricePerServing: Double?
     let extendedIngredients: [ExtendedIngredientModel]?
     let id: Int
@@ -19,7 +19,7 @@ class RecipeModel: Codable, Hashable {
     let readyInMinutes, servings: Int?
     let sourceURL: String?
     let image: String?
-    let imageType: ImageType?
+    let imageType: String?
     let summary: String?
     let cuisines, dishTypes, diets, occasions: [String]?
     let instructions: String?
@@ -35,7 +35,7 @@ class RecipeModel: Codable, Hashable {
         case spoonacularSourceURL = "spoonacularSourceUrl"
     }
 
-    init(vegetarian: Bool? = nil, vegan: Bool? = nil, glutenFree: Bool? = nil, dairyFree: Bool? = nil, veryHealthy: Bool? = nil, cheap: Bool? = nil, veryPopular: Bool? = nil, sustainable: Bool? = nil, lowFodmap: Bool? = nil , weightWatcherSmartPoints: Int? = nil, gaps: Gaps? = nil, preparationMinutes: Int? = nil, cookingMinutes: Int? = nil, aggregateLikes: Int? = nil, healthScore: Int? = nil, creditsText: CreditsText? = nil, license: License? = nil, sourceName: SourceName? = nil, pricePerServing: Double? = nil, extendedIngredients: [ExtendedIngredientModel]? = nil, id: Int, title: String? = nil, readyInMinutes: Int? = nil, servings: Int? = nil, sourceURL: String? = nil, image: String? = nil, imageType: ImageType? = nil, summary: String? = nil, cuisines: [String]? = nil, dishTypes: [String]? = nil, diets: [String]? = nil, occasions: [String]? = nil, instructions: String? = nil, analyzedInstructions: [AnalyzedInstructionModel]? = nil, originalID: JSONNull? = nil, spoonacularSourceURL: String? = nil) {
+    init(vegetarian: Bool? = nil, vegan: Bool? = nil, glutenFree: Bool? = nil, dairyFree: Bool? = nil, veryHealthy: Bool? = nil, cheap: Bool? = nil, veryPopular: Bool? = nil, sustainable: Bool? = nil, lowFodmap: Bool? = nil , weightWatcherSmartPoints: Int? = nil, gaps: String? = nil, preparationMinutes: Int? = nil, cookingMinutes: Int? = nil, aggregateLikes: Int? = nil, healthScore: Int? = nil, creditsText: String? = nil, license: String? = nil, sourceName: String? = nil, pricePerServing: Double? = nil, extendedIngredients: [ExtendedIngredientModel]? = nil, id: Int, title: String? = nil, readyInMinutes: Int? = nil, servings: Int? = nil, sourceURL: String? = nil, image: String? = nil, imageType: String? = nil, summary: String? = nil, cuisines: [String]? = nil, dishTypes: [String]? = nil, diets: [String]? = nil, occasions: [String]? = nil, instructions: String? = nil, analyzedInstructions: [AnalyzedInstructionModel]? = nil, originalID: JSONNull? = nil, spoonacularSourceURL: String? = nil) {
         self.vegetarian = vegetarian
         self.vegan = vegan
         self.glutenFree = glutenFree

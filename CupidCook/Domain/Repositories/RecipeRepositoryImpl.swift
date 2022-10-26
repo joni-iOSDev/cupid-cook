@@ -73,6 +73,17 @@ class RecipeRepositoryImpl: RecipeRepositoryProtocol {
         
     }
     
+    func getRecipe(id: Int) async -> Result<RecipeModel, NetworkError> {
+        let result = await networkManager.getRecipe(with: id, params: .init(includeNutrition: false))
+        
+        switch result {
+        case .success(let success):
+            return .success(success)
+        case .failure(let failure):
+            return .failure(failure)
+        }
+        
+    }
 
 }
 

@@ -9,17 +9,13 @@ import Foundation
 
 // MARK: - Nutrient
 class Nutrient: Codable {
-    let name: Name?
+    let name: String?
     let amount: Double?
-    let unit: Unit?
+    let unit: String?
 
-    init(name: Name?, amount: Double?, unit: Unit?) {
+    init(name: String?, amount: Double?, unit: String?) {
         self.name = name
         self.amount = amount
         self.unit = unit
     }
-}
-
-enum Name: String, Codable {
-    case fat = "Fat"
 }

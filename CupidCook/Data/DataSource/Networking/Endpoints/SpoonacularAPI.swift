@@ -22,6 +22,7 @@ public enum SpoonacularAPI {
     case randomRecipes(_ params: FoodEndpointParameters)
     case similarRecipes(_ recipeId: String)
     case searchRecipe(_ query: FoodEndpointParameters)
+    case recipeInformation(_ id: Int, params: FoodEndpointParameters)
 }
 
 extension SpoonacularAPI: EndPointType {
@@ -42,6 +43,8 @@ extension SpoonacularAPI: EndPointType {
             return "/recipes/\(recipe_id)/similar"
         case .searchRecipe:
             return "/recipes/complexSearch"
+        case .recipeInformation(let recipe_id, _):
+            return "/recipes/\(recipe_id)/information"
         }
     }
     
@@ -72,6 +75,8 @@ extension SpoonacularAPI: EndPointType {
         case .randomRecipes(let params):
             return params.toDictionary
         case .searchRecipe(let params):
+            return params.toDictionary
+        case .recipeInformation(_, params: let params):
             return params.toDictionary
         default:
             return [:]
