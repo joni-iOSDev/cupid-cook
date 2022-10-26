@@ -25,6 +25,9 @@
 		F2430AB02909A09B002E9A95 /* SearchRecipeUseCaseProcotol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2430AAF2909A09B002E9A95 /* SearchRecipeUseCaseProcotol.swift */; };
 		F2430AB22909A146002E9A95 /* SearchRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2430AB12909A146002E9A95 /* SearchRecipe.swift */; };
 		F2430AB42909A270002E9A95 /* FoodAPISearchRecipeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2430AB32909A270002E9A95 /* FoodAPISearchRecipeResponse.swift */; };
+		F2430AB62909BBA2002E9A95 /* RecipeResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2430AB52909BBA2002E9A95 /* RecipeResult.swift */; };
+		F2430AB82909BBBD002E9A95 /* Nutrition.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2430AB72909BBBD002E9A95 /* Nutrition.swift */; };
+		F2430ABA2909BBCB002E9A95 /* Nutrient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2430AB92909BBCB002E9A95 /* Nutrient.swift */; };
 		F29D073E2908B210003634AC /* DependencyInjectionResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D073D2908B210003634AC /* DependencyInjectionResolver.swift */; };
 		F29D07402908B28A003634AC /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D073F2908B28A003634AC /* DIContainer.swift */; };
 		F29D07442908C4B6003634AC /* RecipesDiscoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D07432908C4B6003634AC /* RecipesDiscoverView.swift */; };
@@ -103,6 +106,9 @@
 		F2430AAF2909A09B002E9A95 /* SearchRecipeUseCaseProcotol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRecipeUseCaseProcotol.swift; sourceTree = "<group>"; };
 		F2430AB12909A146002E9A95 /* SearchRecipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRecipe.swift; sourceTree = "<group>"; };
 		F2430AB32909A270002E9A95 /* FoodAPISearchRecipeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodAPISearchRecipeResponse.swift; sourceTree = "<group>"; };
+		F2430AB52909BBA2002E9A95 /* RecipeResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeResult.swift; sourceTree = "<group>"; };
+		F2430AB72909BBBD002E9A95 /* Nutrition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nutrition.swift; sourceTree = "<group>"; };
+		F2430AB92909BBCB002E9A95 /* Nutrient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nutrient.swift; sourceTree = "<group>"; };
 		F29D073D2908B210003634AC /* DependencyInjectionResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjectionResolver.swift; sourceTree = "<group>"; };
 		F29D073F2908B28A003634AC /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		F29D07432908C4B6003634AC /* RecipesDiscoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesDiscoverView.swift; sourceTree = "<group>"; };
@@ -490,6 +496,9 @@
 				F29D07652908E9FE003634AC /* ExtendedIngredientModel.swift */,
 				F29D07672908EA49003634AC /* MeasuresModel.swift */,
 				F29D07692908EA8F003634AC /* MetricModel.swift */,
+				F2430AB52909BBA2002E9A95 /* RecipeResult.swift */,
+				F2430AB72909BBBD002E9A95 /* Nutrition.swift */,
+				F2430AB92909BBCB002E9A95 /* Nutrient.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -757,10 +766,13 @@
 				F2BBC1A82908A8D100FDAB7F /* RandomRecipesParameters.swift in Sources */,
 				F2A67C3429089CAC00E29089 /* ContentView.swift in Sources */,
 				F2430AB22909A146002E9A95 /* SearchRecipe.swift in Sources */,
+				F2430AB62909BBA2002E9A95 /* RecipeResult.swift in Sources */,
+				F2430AB82909BBBD002E9A95 /* Nutrition.swift in Sources */,
 				F29D076A2908EA8F003634AC /* MetricModel.swift in Sources */,
 				F29D075E2908E863003634AC /* StepModel.swift in Sources */,
 				F2BBC1BC2908AAD400FDAB7F /* RecipeModel.swift in Sources */,
 				F2A67C3229089CAC00E29089 /* CupidCookApp.swift in Sources */,
+				F2430ABA2909BBCB002E9A95 /* Nutrient.swift in Sources */,
 				F2430A9A290901F7002E9A95 /* RecipeModelMapper.swift in Sources */,
 				F2BBC1AF2908A95F00FDAB7F /* NetworkManager.swift in Sources */,
 				F2BBC1AC2908A92000FDAB7F /* SearchRecipeParameters.swift in Sources */,
