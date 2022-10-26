@@ -60,6 +60,19 @@ class RecipeRepositoryImpl: RecipeRepositoryProtocol {
         }
         return .success(localStore.recipeFavorites)
     }
+    
+    func search(params: SearchRecipeParameters) async -> Result<[RecipeResult], NetworkError> {
+        let result = await networkManager.searcRecipe(with: params)
+        
+        switch result {
+        case .success(let success):
+            return .success(success)
+        case .failure(let failure):
+            return .failure(failure)
+        }
+        
+    }
+    
 
 }
 

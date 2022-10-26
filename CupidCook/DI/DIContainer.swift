@@ -34,5 +34,9 @@ func buildContainer() -> Container {
         return SaveRecipe(recipeRepository: container.resolve(RecipeRepositoryProtocol.self)!)
     }
     
+    container.register(SearchRecipeUseCaseProcotol.self) { _ in
+        return SearchRecipe(recipeRepository: container.resolve(RecipeRepositoryProtocol.self)!)
+    }
+    
     return container
 }

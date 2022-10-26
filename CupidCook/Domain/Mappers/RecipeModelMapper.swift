@@ -13,5 +13,11 @@ struct RecipeModelMapper {
                      title: recipeDTO.title,
                      imageUrl: recipeDTO.image)
     }
+    
+    static func mapDataModelToModel(_ recipeDTO: RecipeResult) -> Recipe {
+        return  .init(id: recipeDTO.id,
+                     title: recipeDTO.title,
+                     imageUrl: recipeDTO.image)
+    }
 }
 

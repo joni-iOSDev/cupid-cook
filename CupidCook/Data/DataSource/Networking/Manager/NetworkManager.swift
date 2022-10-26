@@ -11,14 +11,14 @@ import Alamofire
 protocol NetworkManagerProtocol {
     func getRandomRecipies(with params: RandomRecipesParameters,_ completionHandler: @escaping (Result<[RecipeModel]?, NetworkError>) -> Void)
     func getRandomRecipies(with params: RandomRecipesParameters) async -> Result<[RecipeModel], NetworkError>
-
+    func searcRecipe(with params: SearchRecipeParameters) async -> Result<[RecipeResult], NetworkError>
 }
 
 struct NetworkManager: NetworkManagerProtocol {
     
     private let routerFoodAPI = Router<SpoonacularAPI>()
 
-    static let environment: NetworkEnvironment = .mock
+    static let environment: NetworkEnvironment = .production
     
     func getRandomRecipies(with params: RandomRecipesParameters = .init()
                            ,_ completionHandler: @escaping (Result<[RecipeModel]?, NetworkError>) -> Void) {
@@ -43,6 +43,18 @@ struct NetworkManager: NetworkManagerProtocol {
         switch result {
         case .success(let success):
             guard let recipes = success.recipes else { return .failure(.unwrapperError)}
+            return .success(recipes)
+        case .failure(_):
+            return .failure(.unwrapperError)
+        }
+    }
+    
+    func searcRecipe(with params: SearchRecipeParameters) async -> Result<[RecipeResult], NetworkError> {
+        let result = await routerFoodAPI.request(expectedData: FoodAPISearchRecipeResponse.self, from: .searchRecipe(params))
+        
+        switch result {
+        case .success(let success):
+            guard let recipes = success.results else { return .failure(.unwrapperError)}
             return .success(recipes)
         case .failure(_):
             return .failure(.unwrapperError)

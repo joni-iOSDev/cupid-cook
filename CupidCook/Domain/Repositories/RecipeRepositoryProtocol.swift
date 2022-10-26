@@ -13,5 +13,5 @@ protocol RecipeRepositoryProtocol {
     func saveLike(recipe: RecipeModel) async -> Result<Bool, NetworkError>
     func getFavorites() async -> Result<[RecipeModel], NetworkError>
     func getLikes() async -> Result<[RecipeModel], NetworkError>
-
+    func search(params: SearchRecipeParameters) async -> Result<[RecipeResult], NetworkError>
 }
