@@ -10,6 +10,8 @@
 		22399040471AB0302B759D88 /* Pods_CupidCook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D4B7CB3DC4AB3B4D598E7EC /* Pods_CupidCook.framework */; };
 		6386BE9E30EE6289543BB30E /* Pods_CupidCook_CupidCookUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A355E903B1626B94B7FE200B /* Pods_CupidCook_CupidCookUITests.framework */; };
 		8046CA51ABB77ECE349D441F /* Pods_CupidCookTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB6C4D371ACAA0CF91D379D6 /* Pods_CupidCookTests.framework */; };
+		F29D073E2908B210003634AC /* DependencyInjectionResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D073D2908B210003634AC /* DependencyInjectionResolver.swift */; };
+		F29D07402908B28A003634AC /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D073F2908B28A003634AC /* DIContainer.swift */; };
 		F2A67C3229089CAC00E29089 /* CupidCookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A67C3129089CAC00E29089 /* CupidCookApp.swift */; };
 		F2A67C3429089CAC00E29089 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A67C3329089CAC00E29089 /* ContentView.swift */; };
 		F2A67C3629089CAC00E29089 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2A67C3529089CAC00E29089 /* Assets.xcassets */; };
@@ -57,6 +59,8 @@
 		DC8DF662A819CB69E2E295BB /* Pods-CupidCook-CupidCookUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CupidCook-CupidCookUITests.release.xcconfig"; path = "Target Support Files/Pods-CupidCook-CupidCookUITests/Pods-CupidCook-CupidCookUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E1FAF0203227674EA9982738 /* Pods-CupidCook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CupidCook.debug.xcconfig"; path = "Target Support Files/Pods-CupidCook/Pods-CupidCook.debug.xcconfig"; sourceTree = "<group>"; };
 		EB6C4D371ACAA0CF91D379D6 /* Pods_CupidCookTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CupidCookTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F29D073D2908B210003634AC /* DependencyInjectionResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjectionResolver.swift; sourceTree = "<group>"; };
+		F29D073F2908B28A003634AC /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		F2A67C2E29089CAC00E29089 /* CupidCook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CupidCook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2A67C3129089CAC00E29089 /* CupidCookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupidCookApp.swift; sourceTree = "<group>"; };
 		F2A67C3329089CAC00E29089 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -139,6 +143,15 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		F29D073C2908B206003634AC /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				F29D073D2908B210003634AC /* DependencyInjectionResolver.swift */,
+				F29D073F2908B28A003634AC /* DIContainer.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
 		F2A67C2529089CAC00E29089 = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +177,7 @@
 		F2A67C3029089CAC00E29089 /* CupidCook */ = {
 			isa = PBXGroup;
 			children = (
+				F29D073C2908B206003634AC /* DI */,
 				F2BBC1B92908AAAB00FDAB7F /* Domain */,
 				F2BBC1A02908A73100FDAB7F /* Data */,
 				F24E21BE2908A585007B8600 /* Resources */,
@@ -526,6 +540,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F29D07402908B28A003634AC /* DIContainer.swift in Sources */,
+				F29D073E2908B210003634AC /* DependencyInjectionResolver.swift in Sources */,
 				F2BBC1B22908A9DE00FDAB7F /* CCRouter.swift in Sources */,
 				F2BBC1A82908A8D100FDAB7F /* RandomRecipesParameters.swift in Sources */,
 				F2A67C3429089CAC00E29089 /* ContentView.swift in Sources */,
