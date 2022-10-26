@@ -1,5 +1,5 @@
 //
-//  Nutrition.swift
+//  NutritionModel.swift
 //  CupidCook
 //
 //  Created by Joni Gonzalez on 26/10/2022.
@@ -8,10 +8,10 @@
 import Foundation
 
 // MARK: - Nutrition
-class Nutrition: Codable {
-    let nutrients: [Nutrient]?
+class NutritionModel: Codable {
+    let nutrients: [NutrientModel]?
 
-    init(nutrients: [Nutrient]?) {
+    init(nutrients: [NutrientModel]?) {
         self.nutrients = nutrients
     }
 }
