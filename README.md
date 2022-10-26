@@ -16,3 +16,7 @@ The architecture implemented was MVVM (Model-View-ViewModel)with dependency inje
  #### Use case
  Every task is executed throw own use case
 
+# Run Project
+You should execute a command to install the lebriaries required. 
+
+Command: ```pod install```
