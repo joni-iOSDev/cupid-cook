@@ -18,9 +18,9 @@ The architecture implemented was MVVM (Model-View-ViewModel)with dependency inje
  With alamofire, generics and an protocol-oriented approach we can to execute a clean task by every request.
 
  #### Use case
- Every task is executed throw own use case
+ Every task is executed throw with you own use case
 
 # Run Project
-You should execute a command to install the lebriaries required. 
+You should execute a command to install the libraries required. 
 
 Command: ```pod install```
