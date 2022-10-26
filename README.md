@@ -2,6 +2,10 @@
 
 ---
 An app to do match with thoses nice food and recepis that you love
+
+![Simulator Screen Recording - iPhone 14 Pro - 2022-10-26 at 18 00 01](https://user-images.githubusercontent.com/36254816/198139721-c507c4ce-8bcc-4c2c-ba9d-6668698eadc8.gif)
+
+
 ----
 ### Technical description
 #### Architecture
