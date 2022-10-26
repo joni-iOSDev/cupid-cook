@@ -36,4 +36,16 @@ class Router<EndPoint: EndPointType>: NetworkRouterProtocol {
             }
         }
     }
+    
+    func request<GenericObject: Decodable>(expectedData: GenericObject.Type, from route: EndPoint) async -> Result<GenericObject, AFError> {
+        do {
+            let result = try await AF.request(route.endpointURL,
+                                             method: route.httpMethod,
+                                             parameters: route.parameters?.combine(secretParam),
+                                             headers: route.headers).serializingDecodable(GenericObject.self).value
+            return .success(result)
+        } catch (let error) {
+            return .failure(.sessionInvalidated(error: error))
+        }
+    }
 }
