@@ -10,9 +10,9 @@ import Foundation
 // MARK: - Length
 class LengthModel: Codable {
     let number: Int?
-    let unit: Unit?
+    let unit: String?
 
-    init(number: Int?, unit: Unit?) {
+    init(number: Int?, unit: String?) {
         self.number = number
         self.unit = unit
     }
@@ -33,16 +33,6 @@ extension LengthModel {
 
     convenience init(fromURL url: URL) throws {
         try self.init(data: try Data(contentsOf: url))
-    }
-
-    func with(
-        number: Int?? = nil,
-        unit: Unit?? = nil
-    ) -> LengthModel {
-        return LengthModel(
-            number: number ?? self.number,
-            unit: unit ?? self.unit
-        )
     }
 
     func jsonData() throws -> Data {

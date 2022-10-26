@@ -9,6 +9,7 @@ import Foundation
 
 protocol RecipeRepositoryProtocol {
     func getRandomRecipes() async -> Result<[RecipeModel], NetworkError>
+    func getRecipe(id: Int) async -> Result<RecipeModel, NetworkError>
     func saveFavorite(recipe: RecipeModel) async -> Result<Bool, NetworkError>
     func saveLike(recipe: RecipeModel) async -> Result<Bool, NetworkError>
     func getFavorites() async -> Result<[RecipeModel], NetworkError>
