@@ -35,7 +35,7 @@ class RecipeModel: Codable, Hashable {
         case spoonacularSourceURL = "spoonacularSourceUrl"
     }
 
-    init(vegetarian: Bool?, vegan: Bool?, glutenFree: Bool?, dairyFree: Bool?, veryHealthy: Bool?, cheap: Bool?, veryPopular: Bool?, sustainable: Bool?, lowFodmap: Bool?, weightWatcherSmartPoints: Int?, gaps: Gaps?, preparationMinutes: Int?, cookingMinutes: Int?, aggregateLikes: Int?, healthScore: Int?, creditsText: CreditsText?, license: License?, sourceName: SourceName?, pricePerServing: Double?, extendedIngredients: [ExtendedIngredientModel]?, id: Int, title: String?, readyInMinutes: Int?, servings: Int?, sourceURL: String?, image: String?, imageType: ImageType?, summary: String?, cuisines: [String]?, dishTypes: [String]?, diets: [String]?, occasions: [String]?, instructions: String?, analyzedInstructions: [AnalyzedInstructionModel]?, originalID: JSONNull?, spoonacularSourceURL: String?) {
+    init(vegetarian: Bool? = nil, vegan: Bool? = nil, glutenFree: Bool? = nil, dairyFree: Bool? = nil, veryHealthy: Bool? = nil, cheap: Bool? = nil, veryPopular: Bool? = nil, sustainable: Bool? = nil, lowFodmap: Bool? = nil , weightWatcherSmartPoints: Int? = nil, gaps: Gaps? = nil, preparationMinutes: Int? = nil, cookingMinutes: Int? = nil, aggregateLikes: Int? = nil, healthScore: Int? = nil, creditsText: CreditsText? = nil, license: License? = nil, sourceName: SourceName? = nil, pricePerServing: Double? = nil, extendedIngredients: [ExtendedIngredientModel]? = nil, id: Int, title: String? = nil, readyInMinutes: Int? = nil, servings: Int? = nil, sourceURL: String? = nil, image: String? = nil, imageType: ImageType? = nil, summary: String? = nil, cuisines: [String]? = nil, dishTypes: [String]? = nil, diets: [String]? = nil, occasions: [String]? = nil, instructions: String? = nil, analyzedInstructions: [AnalyzedInstructionModel]? = nil, originalID: JSONNull? = nil, spoonacularSourceURL: String? = nil) {
         self.vegetarian = vegetarian
         self.vegan = vegan
         self.glutenFree = glutenFree
@@ -100,84 +100,6 @@ extension RecipeModel {
 
     convenience init(fromURL url: URL) throws {
         try self.init(data: try Data(contentsOf: url))
-    }
-
-    func with(
-        vegetarian: Bool?? = nil,
-        vegan: Bool?? = nil,
-        glutenFree: Bool?? = nil,
-        dairyFree: Bool?? = nil,
-        veryHealthy: Bool?? = nil,
-        cheap: Bool?? = nil,
-        veryPopular: Bool?? = nil,
-        sustainable: Bool?? = nil,
-        lowFodmap: Bool?? = nil,
-        weightWatcherSmartPoints: Int?? = nil,
-        gaps: Gaps?? = nil,
-        preparationMinutes: Int?? = nil,
-        cookingMinutes: Int?? = nil,
-        aggregateLikes: Int?? = nil,
-        healthScore: Int?? = nil,
-        creditsText: CreditsText?? = nil,
-        license: License?? = nil,
-        sourceName: SourceName?? = nil,
-        pricePerServing: Double?? = nil,
-        extendedIngredients: [ExtendedIngredientModel]?? = nil,
-        id: Int,
-        title: String?? = nil,
-        readyInMinutes: Int?? = nil,
-        servings: Int?? = nil,
-        sourceURL: String?? = nil,
-        image: String?? = nil,
-        imageType: ImageType?? = nil,
-        summary: String?? = nil,
-        cuisines: [String]?? = nil,
-        dishTypes: [String]?? = nil,
-        diets: [String]?? = nil,
-        occasions: [String]?? = nil,
-        instructions: String?? = nil,
-        analyzedInstructions: [AnalyzedInstructionModel]?? = nil,
-        originalID: JSONNull?? = nil,
-        spoonacularSourceURL: String?? = nil
-    ) -> RecipeModel {
-        return RecipeModel(
-            vegetarian: vegetarian ?? self.vegetarian,
-            vegan: vegan ?? self.vegan,
-            glutenFree: glutenFree ?? self.glutenFree,
-            dairyFree: dairyFree ?? self.dairyFree,
-            veryHealthy: veryHealthy ?? self.veryHealthy,
-            cheap: cheap ?? self.cheap,
-            veryPopular: veryPopular ?? self.veryPopular,
-            sustainable: sustainable ?? self.sustainable,
-            lowFodmap: lowFodmap ?? self.lowFodmap,
-            weightWatcherSmartPoints: weightWatcherSmartPoints ?? self.weightWatcherSmartPoints,
-            gaps: gaps ?? self.gaps,
-            preparationMinutes: preparationMinutes ?? self.preparationMinutes,
-            cookingMinutes: cookingMinutes ?? self.cookingMinutes,
-            aggregateLikes: aggregateLikes ?? self.aggregateLikes,
-            healthScore: healthScore ?? self.healthScore,
-            creditsText: creditsText ?? self.creditsText,
-            license: license ?? self.license,
-            sourceName: sourceName ?? self.sourceName,
-            pricePerServing: pricePerServing ?? self.pricePerServing,
-            extendedIngredients: extendedIngredients ?? self.extendedIngredients,
-            id: id,
-            title: title ?? self.title,
-            readyInMinutes: readyInMinutes ?? self.readyInMinutes,
-            servings: servings ?? self.servings,
-            sourceURL: sourceURL ?? self.sourceURL,
-            image: image ?? self.image,
-            imageType: imageType ?? self.imageType,
-            summary: summary ?? self.summary,
-            cuisines: cuisines ?? self.cuisines,
-            dishTypes: dishTypes ?? self.dishTypes,
-            diets: diets ?? self.diets,
-            occasions: occasions ?? self.occasions,
-            instructions: instructions ?? self.instructions,
-            analyzedInstructions: analyzedInstructions ?? self.analyzedInstructions,
-            originalID: originalID ?? self.originalID,
-            spoonacularSourceURL: spoonacularSourceURL ?? self.spoonacularSourceURL
-        )
     }
 
     func jsonData() throws -> Data {

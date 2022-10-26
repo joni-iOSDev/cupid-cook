@@ -20,6 +20,10 @@ class RecipesDiscoverViewModel: ObservableObject {
         self.getRandomRecipesUseCase = getRandomRecipesUseCase
     }
     
+    func getIndex(recipe: RecipeModel) -> Int {
+        return recipes.firstIndex(where: { $0.id == recipe.id }) ?? 0
+    }
+    
     @MainActor func getRandomRecipes() async {
         let result = await self.getRandomRecipesUseCase.execute()
         

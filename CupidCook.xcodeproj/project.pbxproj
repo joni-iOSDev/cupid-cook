@@ -10,6 +10,12 @@
 		22399040471AB0302B759D88 /* Pods_CupidCook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D4B7CB3DC4AB3B4D598E7EC /* Pods_CupidCook.framework */; };
 		6386BE9E30EE6289543BB30E /* Pods_CupidCook_CupidCookUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A355E903B1626B94B7FE200B /* Pods_CupidCook_CupidCookUITests.framework */; };
 		8046CA51ABB77ECE349D441F /* Pods_CupidCookTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB6C4D371ACAA0CF91D379D6 /* Pods_CupidCookTests.framework */; };
+		F2430A8F2908F8E3002E9A95 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2430A8E2908F8E3002E9A95 /* CircleButton.swift */; };
+		F2430A912908F950002E9A95 /* StackRecipeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2430A902908F950002E9A95 /* StackRecipeCardView.swift */; };
+		F2430A972909019C002E9A95 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2430A962909019C002E9A95 /* Recipe.swift */; };
+		F2430A9A290901F7002E9A95 /* RecipeModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2430A99290901F7002E9A95 /* RecipeModelMapper.swift */; };
+		F2430A9D29090288002E9A95 /* StackRecipeCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2430A9C29090288002E9A95 /* StackRecipeCardViewModel.swift */; };
+		F2430AA0290904E2002E9A95 /* SearchRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2430A9F290904E2002E9A95 /* SearchRecipeView.swift */; };
 		F29D073E2908B210003634AC /* DependencyInjectionResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D073D2908B210003634AC /* DependencyInjectionResolver.swift */; };
 		F29D07402908B28A003634AC /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D073F2908B28A003634AC /* DIContainer.swift */; };
 		F29D07442908C4B6003634AC /* RecipesDiscoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D07432908C4B6003634AC /* RecipesDiscoverView.swift */; };
@@ -73,6 +79,12 @@
 		DC8DF662A819CB69E2E295BB /* Pods-CupidCook-CupidCookUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CupidCook-CupidCookUITests.release.xcconfig"; path = "Target Support Files/Pods-CupidCook-CupidCookUITests/Pods-CupidCook-CupidCookUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E1FAF0203227674EA9982738 /* Pods-CupidCook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CupidCook.debug.xcconfig"; path = "Target Support Files/Pods-CupidCook/Pods-CupidCook.debug.xcconfig"; sourceTree = "<group>"; };
 		EB6C4D371ACAA0CF91D379D6 /* Pods_CupidCookTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CupidCookTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2430A8E2908F8E3002E9A95 /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
+		F2430A902908F950002E9A95 /* StackRecipeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackRecipeCardView.swift; sourceTree = "<group>"; };
+		F2430A962909019C002E9A95 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		F2430A99290901F7002E9A95 /* RecipeModelMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModelMapper.swift; sourceTree = "<group>"; };
+		F2430A9C29090288002E9A95 /* StackRecipeCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackRecipeCardViewModel.swift; sourceTree = "<group>"; };
+		F2430A9F290904E2002E9A95 /* SearchRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRecipeView.swift; sourceTree = "<group>"; };
 		F29D073D2908B210003634AC /* DependencyInjectionResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjectionResolver.swift; sourceTree = "<group>"; };
 		F29D073F2908B28A003634AC /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		F29D07432908C4B6003634AC /* RecipesDiscoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesDiscoverView.swift; sourceTree = "<group>"; };
@@ -164,6 +176,39 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F2430A952909018E002E9A95 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				F2430A962909019C002E9A95 /* Recipe.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		F2430A98290901ED002E9A95 /* Mappers */ = {
+			isa = PBXGroup;
+			children = (
+				F2430A99290901F7002E9A95 /* RecipeModelMapper.swift */,
+			);
+			path = Mappers;
+			sourceTree = "<group>";
+		};
+		F2430A9B2909027B002E9A95 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				F2430A902908F950002E9A95 /* StackRecipeCardView.swift */,
+				F2430A9C29090288002E9A95 /* StackRecipeCardViewModel.swift */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
+		F2430A9E290904CC002E9A95 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				F2430A9F290904E2002E9A95 /* SearchRecipeView.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 		F24E21BE2908A585007B8600 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,6 +230,7 @@
 		F29D07412908C48B003634AC /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				F2430A9E290904CC002E9A95 /* Search */,
 				F29D07452908C4BF003634AC /* Components */,
 				F29D07422908C493003634AC /* Discover */,
 			);
@@ -203,6 +249,8 @@
 		F29D07452908C4BF003634AC /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				F2430A9B2909027B002E9A95 /* Card */,
+				F2430A8E2908F8E3002E9A95 /* CircleButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -380,6 +428,8 @@
 		F2BBC1B92908AAAB00FDAB7F /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				F2430A98290901ED002E9A95 /* Mappers */,
+				F2430A952909018E002E9A95 /* Entities */,
 				F29D074C2908CC9C003634AC /* UseCases */,
 				F29D07472908C572003634AC /* Repositories */,
 			);
@@ -651,16 +701,19 @@
 				F29D075C2908E816003634AC /* AnalyzedInstructionModel.swift in Sources */,
 				F29D07402908B28A003634AC /* DIContainer.swift in Sources */,
 				F29D073E2908B210003634AC /* DependencyInjectionResolver.swift in Sources */,
+				F2430A912908F950002E9A95 /* StackRecipeCardView.swift in Sources */,
 				F29D07602908E8BB003634AC /* EntModel.swift in Sources */,
 				F2BBC1B22908A9DE00FDAB7F /* CCRouter.swift in Sources */,
 				F29D07442908C4B6003634AC /* RecipesDiscoverView.swift in Sources */,
 				F29D07682908EA49003634AC /* MeasuresModel.swift in Sources */,
+				F2430AA0290904E2002E9A95 /* SearchRecipeView.swift in Sources */,
 				F2BBC1A82908A8D100FDAB7F /* RandomRecipesParameters.swift in Sources */,
 				F2A67C3429089CAC00E29089 /* ContentView.swift in Sources */,
 				F29D076A2908EA8F003634AC /* MetricModel.swift in Sources */,
 				F29D075E2908E863003634AC /* StepModel.swift in Sources */,
 				F2BBC1BC2908AAD400FDAB7F /* RecipeModel.swift in Sources */,
 				F2A67C3229089CAC00E29089 /* CupidCookApp.swift in Sources */,
+				F2430A9A290901F7002E9A95 /* RecipeModelMapper.swift in Sources */,
 				F2BBC1AF2908A95F00FDAB7F /* NetworkManager.swift in Sources */,
 				F2BBC1AC2908A92000FDAB7F /* SearchRecipeParameters.swift in Sources */,
 				F29D07522908CD44003634AC /* GetRandomRecipes.swift in Sources */,
@@ -668,14 +721,17 @@
 				F2BBC1B42908AA0D00FDAB7F /* NetworkRouterProtocol.swift in Sources */,
 				F29D074E2908CCB7003634AC /* GetRandomRecipesUseCaseProtocol.swift in Sources */,
 				F29D07622908E91D003634AC /* LengthModel.swift in Sources */,
+				F2430A8F2908F8E3002E9A95 /* CircleButton.swift in Sources */,
 				F2BBC1A42908A77C00FDAB7F /* SpoonacularAPI.swift in Sources */,
 				F2BBC1B62908AA3B00FDAB7F /* EndPointType.swift in Sources */,
 				F29D074B2908C626003634AC /* RecipeRepositoryProtocol.swift in Sources */,
 				F2BBC1AA2908A8EE00FDAB7F /* FoodApiRandomRecipesResponse.swift in Sources */,
 				F2BBC1B82908AA6400FDAB7F /* CCNetworkError.swift in Sources */,
+				F2430A9D29090288002E9A95 /* StackRecipeCardViewModel.swift in Sources */,
 				F29D07662908E9FE003634AC /* ExtendedIngredientModel.swift in Sources */,
 				F29D075A2908E0CC003634AC /* DummyFile.swift in Sources */,
 				F29D07492908C611003634AC /* RecipeRepositoryImpl.swift in Sources */,
+				F2430A972909019C002E9A95 /* Recipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
