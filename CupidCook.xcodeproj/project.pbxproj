@@ -12,6 +12,20 @@
 		8046CA51ABB77ECE349D441F /* Pods_CupidCookTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB6C4D371ACAA0CF91D379D6 /* Pods_CupidCookTests.framework */; };
 		F29D073E2908B210003634AC /* DependencyInjectionResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D073D2908B210003634AC /* DependencyInjectionResolver.swift */; };
 		F29D07402908B28A003634AC /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D073F2908B28A003634AC /* DIContainer.swift */; };
+		F29D07442908C4B6003634AC /* RecipesDiscoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D07432908C4B6003634AC /* RecipesDiscoverView.swift */; };
+		F29D07492908C611003634AC /* RecipeRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D07482908C611003634AC /* RecipeRepositoryImpl.swift */; };
+		F29D074B2908C626003634AC /* RecipeRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D074A2908C626003634AC /* RecipeRepositoryProtocol.swift */; };
+		F29D074E2908CCB7003634AC /* GetRandomRecipesUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D074D2908CCB7003634AC /* GetRandomRecipesUseCaseProtocol.swift */; };
+		F29D07522908CD44003634AC /* GetRandomRecipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D07512908CD44003634AC /* GetRandomRecipes.swift */; };
+		F29D07552908D005003634AC /* RecipesDiscoverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D07542908D005003634AC /* RecipesDiscoverViewModel.swift */; };
+		F29D075A2908E0CC003634AC /* DummyFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D07592908E0CC003634AC /* DummyFile.swift */; };
+		F29D075C2908E816003634AC /* AnalyzedInstructionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D075B2908E816003634AC /* AnalyzedInstructionModel.swift */; };
+		F29D075E2908E863003634AC /* StepModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D075D2908E863003634AC /* StepModel.swift */; };
+		F29D07602908E8BB003634AC /* EntModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D075F2908E8BB003634AC /* EntModel.swift */; };
+		F29D07622908E91D003634AC /* LengthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D07612908E91D003634AC /* LengthModel.swift */; };
+		F29D07662908E9FE003634AC /* ExtendedIngredientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D07652908E9FE003634AC /* ExtendedIngredientModel.swift */; };
+		F29D07682908EA49003634AC /* MeasuresModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D07672908EA49003634AC /* MeasuresModel.swift */; };
+		F29D076A2908EA8F003634AC /* MetricModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D07692908EA8F003634AC /* MetricModel.swift */; };
 		F2A67C3229089CAC00E29089 /* CupidCookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A67C3129089CAC00E29089 /* CupidCookApp.swift */; };
 		F2A67C3429089CAC00E29089 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A67C3329089CAC00E29089 /* ContentView.swift */; };
 		F2A67C3629089CAC00E29089 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2A67C3529089CAC00E29089 /* Assets.xcassets */; };
@@ -28,7 +42,7 @@
 		F2BBC1B42908AA0D00FDAB7F /* NetworkRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BBC1B32908AA0D00FDAB7F /* NetworkRouterProtocol.swift */; };
 		F2BBC1B62908AA3B00FDAB7F /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BBC1B52908AA3B00FDAB7F /* EndPointType.swift */; };
 		F2BBC1B82908AA6400FDAB7F /* CCNetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BBC1B72908AA6400FDAB7F /* CCNetworkError.swift */; };
-		F2BBC1BC2908AAD400FDAB7F /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BBC1BB2908AAD400FDAB7F /* Recipe.swift */; };
+		F2BBC1BC2908AAD400FDAB7F /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BBC1BB2908AAD400FDAB7F /* RecipeModel.swift */; };
 		F2BBC1BF2908AE9E00FDAB7F /* ApiParametersMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BBC1BE2908AE9E00FDAB7F /* ApiParametersMock.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +75,21 @@
 		EB6C4D371ACAA0CF91D379D6 /* Pods_CupidCookTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CupidCookTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F29D073D2908B210003634AC /* DependencyInjectionResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjectionResolver.swift; sourceTree = "<group>"; };
 		F29D073F2908B28A003634AC /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
+		F29D07432908C4B6003634AC /* RecipesDiscoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesDiscoverView.swift; sourceTree = "<group>"; };
+		F29D07482908C611003634AC /* RecipeRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRepositoryImpl.swift; sourceTree = "<group>"; };
+		F29D074A2908C626003634AC /* RecipeRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRepositoryProtocol.swift; sourceTree = "<group>"; };
+		F29D074D2908CCB7003634AC /* GetRandomRecipesUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRandomRecipesUseCaseProtocol.swift; sourceTree = "<group>"; };
+		F29D07512908CD44003634AC /* GetRandomRecipes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRandomRecipes.swift; sourceTree = "<group>"; };
+		F29D07532908CF7A003634AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F29D07542908D005003634AC /* RecipesDiscoverViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesDiscoverViewModel.swift; sourceTree = "<group>"; };
+		F29D07592908E0CC003634AC /* DummyFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyFile.swift; sourceTree = "<group>"; };
+		F29D075B2908E816003634AC /* AnalyzedInstructionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzedInstructionModel.swift; sourceTree = "<group>"; };
+		F29D075D2908E863003634AC /* StepModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepModel.swift; sourceTree = "<group>"; };
+		F29D075F2908E8BB003634AC /* EntModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntModel.swift; sourceTree = "<group>"; };
+		F29D07612908E91D003634AC /* LengthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LengthModel.swift; sourceTree = "<group>"; };
+		F29D07652908E9FE003634AC /* ExtendedIngredientModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtendedIngredientModel.swift; sourceTree = "<group>"; };
+		F29D07672908EA49003634AC /* MeasuresModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasuresModel.swift; sourceTree = "<group>"; };
+		F29D07692908EA8F003634AC /* MetricModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricModel.swift; sourceTree = "<group>"; };
 		F2A67C2E29089CAC00E29089 /* CupidCook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CupidCook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2A67C3129089CAC00E29089 /* CupidCookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupidCookApp.swift; sourceTree = "<group>"; };
 		F2A67C3329089CAC00E29089 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -80,7 +109,7 @@
 		F2BBC1B32908AA0D00FDAB7F /* NetworkRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouterProtocol.swift; sourceTree = "<group>"; };
 		F2BBC1B52908AA3B00FDAB7F /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
 		F2BBC1B72908AA6400FDAB7F /* CCNetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCNetworkError.swift; sourceTree = "<group>"; };
-		F2BBC1BB2908AAD400FDAB7F /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		F2BBC1BB2908AAD400FDAB7F /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
 		F2BBC1BE2908AE9E00FDAB7F /* ApiParametersMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiParametersMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				F2A67C3529089CAC00E29089 /* Assets.xcassets */,
+				F29D07592908E0CC003634AC /* DummyFile.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -150,6 +180,74 @@
 				F29D073F2908B28A003634AC /* DIContainer.swift */,
 			);
 			path = DI;
+			sourceTree = "<group>";
+		};
+		F29D07412908C48B003634AC /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				F29D07452908C4BF003634AC /* Components */,
+				F29D07422908C493003634AC /* Discover */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		F29D07422908C493003634AC /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				F29D07432908C4B6003634AC /* RecipesDiscoverView.swift */,
+				F29D07542908D005003634AC /* RecipesDiscoverViewModel.swift */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		F29D07452908C4BF003634AC /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		F29D07462908C4D7003634AC /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F2A67C3329089CAC00E29089 /* ContentView.swift */,
+				F2A67C3129089CAC00E29089 /* CupidCookApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		F29D07472908C572003634AC /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				F29D07482908C611003634AC /* RecipeRepositoryImpl.swift */,
+				F29D074A2908C626003634AC /* RecipeRepositoryProtocol.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		F29D074C2908CC9C003634AC /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				F29D07502908CD17003634AC /* Protocols */,
+				F29D074F2908CCC0003634AC /* Recipes */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		F29D074F2908CCC0003634AC /* Recipes */ = {
+			isa = PBXGroup;
+			children = (
+				F29D07512908CD44003634AC /* GetRandomRecipes.swift */,
+			);
+			path = Recipes;
+			sourceTree = "<group>";
+		};
+		F29D07502908CD17003634AC /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F29D074D2908CCB7003634AC /* GetRandomRecipesUseCaseProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		F2A67C2529089CAC00E29089 = {
@@ -177,12 +275,13 @@
 		F2A67C3029089CAC00E29089 /* CupidCook */ = {
 			isa = PBXGroup;
 			children = (
+				F29D07532908CF7A003634AC /* Info.plist */,
+				F29D07462908C4D7003634AC /* App */,
 				F29D073C2908B206003634AC /* DI */,
+				F29D07412908C48B003634AC /* Presentation */,
 				F2BBC1B92908AAAB00FDAB7F /* Domain */,
 				F2BBC1A02908A73100FDAB7F /* Data */,
 				F24E21BE2908A585007B8600 /* Resources */,
-				F2A67C3129089CAC00E29089 /* CupidCookApp.swift */,
-				F2A67C3329089CAC00E29089 /* ContentView.swift */,
 				F2A67C3729089CAD00E29089 /* Preview Content */,
 			);
 			path = CupidCook;
@@ -216,6 +315,7 @@
 		F2BBC1A02908A73100FDAB7F /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				F2BBC1BA2908AAB600FDAB7F /* Models */,
 				F2BBC1A12908A73700FDAB7F /* DataSource */,
 			);
 			path = Data;
@@ -280,7 +380,8 @@
 		F2BBC1B92908AAAB00FDAB7F /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				F2BBC1BA2908AAB600FDAB7F /* Models */,
+				F29D074C2908CC9C003634AC /* UseCases */,
+				F29D07472908C572003634AC /* Repositories */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -288,7 +389,14 @@
 		F2BBC1BA2908AAB600FDAB7F /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F2BBC1BB2908AAD400FDAB7F /* Recipe.swift */,
+				F2BBC1BB2908AAD400FDAB7F /* RecipeModel.swift */,
+				F29D075B2908E816003634AC /* AnalyzedInstructionModel.swift */,
+				F29D075D2908E863003634AC /* StepModel.swift */,
+				F29D075F2908E8BB003634AC /* EntModel.swift */,
+				F29D07612908E91D003634AC /* LengthModel.swift */,
+				F29D07652908E9FE003634AC /* ExtendedIngredientModel.swift */,
+				F29D07672908EA49003634AC /* MeasuresModel.swift */,
+				F29D07692908EA8F003634AC /* MetricModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -540,20 +648,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F29D075C2908E816003634AC /* AnalyzedInstructionModel.swift in Sources */,
 				F29D07402908B28A003634AC /* DIContainer.swift in Sources */,
 				F29D073E2908B210003634AC /* DependencyInjectionResolver.swift in Sources */,
+				F29D07602908E8BB003634AC /* EntModel.swift in Sources */,
 				F2BBC1B22908A9DE00FDAB7F /* CCRouter.swift in Sources */,
+				F29D07442908C4B6003634AC /* RecipesDiscoverView.swift in Sources */,
+				F29D07682908EA49003634AC /* MeasuresModel.swift in Sources */,
 				F2BBC1A82908A8D100FDAB7F /* RandomRecipesParameters.swift in Sources */,
 				F2A67C3429089CAC00E29089 /* ContentView.swift in Sources */,
-				F2BBC1BC2908AAD400FDAB7F /* Recipe.swift in Sources */,
+				F29D076A2908EA8F003634AC /* MetricModel.swift in Sources */,
+				F29D075E2908E863003634AC /* StepModel.swift in Sources */,
+				F2BBC1BC2908AAD400FDAB7F /* RecipeModel.swift in Sources */,
 				F2A67C3229089CAC00E29089 /* CupidCookApp.swift in Sources */,
 				F2BBC1AF2908A95F00FDAB7F /* NetworkManager.swift in Sources */,
 				F2BBC1AC2908A92000FDAB7F /* SearchRecipeParameters.swift in Sources */,
+				F29D07522908CD44003634AC /* GetRandomRecipes.swift in Sources */,
+				F29D07552908D005003634AC /* RecipesDiscoverViewModel.swift in Sources */,
 				F2BBC1B42908AA0D00FDAB7F /* NetworkRouterProtocol.swift in Sources */,
+				F29D074E2908CCB7003634AC /* GetRandomRecipesUseCaseProtocol.swift in Sources */,
+				F29D07622908E91D003634AC /* LengthModel.swift in Sources */,
 				F2BBC1A42908A77C00FDAB7F /* SpoonacularAPI.swift in Sources */,
 				F2BBC1B62908AA3B00FDAB7F /* EndPointType.swift in Sources */,
+				F29D074B2908C626003634AC /* RecipeRepositoryProtocol.swift in Sources */,
 				F2BBC1AA2908A8EE00FDAB7F /* FoodApiRandomRecipesResponse.swift in Sources */,
 				F2BBC1B82908AA6400FDAB7F /* CCNetworkError.swift in Sources */,
+				F29D07662908E9FE003634AC /* ExtendedIngredientModel.swift in Sources */,
+				F29D075A2908E0CC003634AC /* DummyFile.swift in Sources */,
+				F29D07492908C611003634AC /* RecipeRepositoryImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -717,6 +839,7 @@
 				DEVELOPMENT_TEAM = NB9XP58HLG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CupidCook/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -747,6 +870,7 @@
 				DEVELOPMENT_TEAM = NB9XP58HLG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CupidCook/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

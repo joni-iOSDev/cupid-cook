@@ -11,7 +11,19 @@ import Swinject
 func buildContainer() -> Container {
     let container = Container()
     
-    // TODO: Add dependecies
+    //MARK: Add dependecies
+    container.register(NetworkManagerProtocol.self) { _ in
+        return NetworkManager()
+    }
+    
+    container.register(RecipeRepositoryProtocol.self) { _ in
+        return RecipeRepositoryImpl(networkManager: container.resolve(NetworkManagerProtocol.self)!)
+    }
+    
+    container.register(GetRandomRecipesUseCaseProtocol.self) { _ in
+        return GetRandomRecipes(recipeRepository: container.resolve(RecipeRepositoryProtocol.self)!)
+    }
+    
     
     return container
 }
