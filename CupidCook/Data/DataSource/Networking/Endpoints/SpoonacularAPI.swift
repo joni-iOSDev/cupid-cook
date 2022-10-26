@@ -41,7 +41,7 @@ extension SpoonacularAPI: EndPointType {
         case .similarRecipes(let recipe_id):
             return "/recipes/\(recipe_id)/similar"
         case .searchRecipe:
-            return "/recipe/complexSearch"
+            return "/recipes/complexSearch"
         }
     }
     
