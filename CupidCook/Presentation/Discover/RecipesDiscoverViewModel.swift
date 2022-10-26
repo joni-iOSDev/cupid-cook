@@ -14,10 +14,10 @@ class RecipesDiscoverViewModel: ObservableObject {
     @Published var onViewDidload = false
     @Published var recipes: [RecipeModel] = []
     
-    private let getRandomRecipesUseCase: GetRandomRecipesUseCaseProtocol
+    private let getRandomRecipesUseCase: GetRecipesUseCaseProtocol
     private let saveRecipesUseCase: SaveRecipesUseCaseProtocol
     
-    init(getRandomRecipesUseCase: GetRandomRecipesUseCaseProtocol, saveRecipeUseCase: SaveRecipesUseCaseProtocol) {
+    init(getRandomRecipesUseCase: GetRecipesUseCaseProtocol, saveRecipeUseCase: SaveRecipesUseCaseProtocol) {
         self.getRandomRecipesUseCase = getRandomRecipesUseCase
         self.saveRecipesUseCase = saveRecipeUseCase
     }
@@ -27,14 +27,14 @@ class RecipesDiscoverViewModel: ObservableObject {
     }
     
     @MainActor func getRandomRecipes() async {
-        let result = await self.getRandomRecipesUseCase.execute()
+        let result = await self.getRandomRecipesUseCase.executeGetRadom()
         
         switch result {
         case .success(let success):
             recipes = success
         case .failure(let failure):
             showAlert = true
-            message = failure.localizedDescription
+            message = failure.rawValue
         }
     }
     
@@ -50,13 +50,13 @@ class RecipesDiscoverViewModel: ObservableObject {
         switch result {
         case .success(let success):
             if success {
-                // TODO: Present a message
+                // TODO: Present a message if needle
                 print("123 Save OK")
             }
             
         case .failure(let failure):
             showAlert = true
-            message = failure.localizedDescription
+            message = failure.rawValue
         }
     }
 }

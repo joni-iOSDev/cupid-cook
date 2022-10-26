@@ -19,13 +19,15 @@
 		F2430AA2290915CB002E9A95 /* SaveRecipesUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2430AA1290915CB002E9A95 /* SaveRecipesUseCaseProtocol.swift */; };
 		F2430AA429091631002E9A95 /* SaveRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2430AA329091631002E9A95 /* SaveRecipe.swift */; };
 		F2430AA629091B90002E9A95 /* DummyTempTestLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2430AA529091B90002E9A95 /* DummyTempTestLogic.swift */; };
+		F2430AA929092D3F002E9A95 /* FavoriteRecipesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2430AA829092D3F002E9A95 /* FavoriteRecipesView.swift */; };
+		F2430AAB29092DB0002E9A95 /* FavoriteRecipesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2430AAA29092DB0002E9A95 /* FavoriteRecipesViewModel.swift */; };
 		F29D073E2908B210003634AC /* DependencyInjectionResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D073D2908B210003634AC /* DependencyInjectionResolver.swift */; };
 		F29D07402908B28A003634AC /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D073F2908B28A003634AC /* DIContainer.swift */; };
 		F29D07442908C4B6003634AC /* RecipesDiscoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D07432908C4B6003634AC /* RecipesDiscoverView.swift */; };
 		F29D07492908C611003634AC /* RecipeRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D07482908C611003634AC /* RecipeRepositoryImpl.swift */; };
 		F29D074B2908C626003634AC /* RecipeRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D074A2908C626003634AC /* RecipeRepositoryProtocol.swift */; };
-		F29D074E2908CCB7003634AC /* GetRandomRecipesUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D074D2908CCB7003634AC /* GetRandomRecipesUseCaseProtocol.swift */; };
-		F29D07522908CD44003634AC /* GetRandomRecipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D07512908CD44003634AC /* GetRandomRecipes.swift */; };
+		F29D074E2908CCB7003634AC /* GetRecipesUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D074D2908CCB7003634AC /* GetRecipesUseCaseProtocol.swift */; };
+		F29D07522908CD44003634AC /* GetRecipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D07512908CD44003634AC /* GetRecipes.swift */; };
 		F29D07552908D005003634AC /* RecipesDiscoverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D07542908D005003634AC /* RecipesDiscoverViewModel.swift */; };
 		F29D075A2908E0CC003634AC /* DummyFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D07592908E0CC003634AC /* DummyFile.swift */; };
 		F29D075C2908E816003634AC /* AnalyzedInstructionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D075B2908E816003634AC /* AnalyzedInstructionModel.swift */; };
@@ -91,13 +93,15 @@
 		F2430AA1290915CB002E9A95 /* SaveRecipesUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveRecipesUseCaseProtocol.swift; sourceTree = "<group>"; };
 		F2430AA329091631002E9A95 /* SaveRecipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveRecipe.swift; sourceTree = "<group>"; };
 		F2430AA529091B90002E9A95 /* DummyTempTestLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyTempTestLogic.swift; sourceTree = "<group>"; };
+		F2430AA829092D3F002E9A95 /* FavoriteRecipesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRecipesView.swift; sourceTree = "<group>"; };
+		F2430AAA29092DB0002E9A95 /* FavoriteRecipesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRecipesViewModel.swift; sourceTree = "<group>"; };
 		F29D073D2908B210003634AC /* DependencyInjectionResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjectionResolver.swift; sourceTree = "<group>"; };
 		F29D073F2908B28A003634AC /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		F29D07432908C4B6003634AC /* RecipesDiscoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesDiscoverView.swift; sourceTree = "<group>"; };
 		F29D07482908C611003634AC /* RecipeRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRepositoryImpl.swift; sourceTree = "<group>"; };
 		F29D074A2908C626003634AC /* RecipeRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRepositoryProtocol.swift; sourceTree = "<group>"; };
-		F29D074D2908CCB7003634AC /* GetRandomRecipesUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRandomRecipesUseCaseProtocol.swift; sourceTree = "<group>"; };
-		F29D07512908CD44003634AC /* GetRandomRecipes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRandomRecipes.swift; sourceTree = "<group>"; };
+		F29D074D2908CCB7003634AC /* GetRecipesUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRecipesUseCaseProtocol.swift; sourceTree = "<group>"; };
+		F29D07512908CD44003634AC /* GetRecipes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRecipes.swift; sourceTree = "<group>"; };
 		F29D07532908CF7A003634AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F29D07542908D005003634AC /* RecipesDiscoverViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesDiscoverViewModel.swift; sourceTree = "<group>"; };
 		F29D07592908E0CC003634AC /* DummyFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyFile.swift; sourceTree = "<group>"; };
@@ -215,6 +219,23 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
+		F2430AA729092D15002E9A95 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				F2430AA829092D3F002E9A95 /* FavoriteRecipesView.swift */,
+				F2430AAA29092DB0002E9A95 /* FavoriteRecipesViewModel.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		F2430AAC29098104002E9A95 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				F2430A8E2908F8E3002E9A95 /* CircleButton.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
 		F24E21BE2908A585007B8600 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -236,8 +257,9 @@
 		F29D07412908C48B003634AC /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				F2430A9E290904CC002E9A95 /* Search */,
 				F29D07452908C4BF003634AC /* Components */,
+				F2430AA729092D15002E9A95 /* Favorites */,
+				F2430A9E290904CC002E9A95 /* Search */,
 				F29D07422908C493003634AC /* Discover */,
 			);
 			path = Presentation;
@@ -255,8 +277,8 @@
 		F29D07452908C4BF003634AC /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				F2430AAC29098104002E9A95 /* Button */,
 				F2430A9B2909027B002E9A95 /* Card */,
-				F2430A8E2908F8E3002E9A95 /* CircleButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -292,7 +314,7 @@
 		F29D074F2908CCC0003634AC /* Recipes */ = {
 			isa = PBXGroup;
 			children = (
-				F29D07512908CD44003634AC /* GetRandomRecipes.swift */,
+				F29D07512908CD44003634AC /* GetRecipes.swift */,
 				F2430AA329091631002E9A95 /* SaveRecipe.swift */,
 			);
 			path = Recipes;
@@ -301,7 +323,7 @@
 		F29D07502908CD17003634AC /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				F29D074D2908CCB7003634AC /* GetRandomRecipesUseCaseProtocol.swift */,
+				F29D074D2908CCB7003634AC /* GetRecipesUseCaseProtocol.swift */,
 				F2430AA1290915CB002E9A95 /* SaveRecipesUseCaseProtocol.swift */,
 			);
 			path = Protocols;
@@ -711,6 +733,7 @@
 				F2430AA2290915CB002E9A95 /* SaveRecipesUseCaseProtocol.swift in Sources */,
 				F2430AA429091631002E9A95 /* SaveRecipe.swift in Sources */,
 				F29D07402908B28A003634AC /* DIContainer.swift in Sources */,
+				F2430AA929092D3F002E9A95 /* FavoriteRecipesView.swift in Sources */,
 				F29D073E2908B210003634AC /* DependencyInjectionResolver.swift in Sources */,
 				F2430A912908F950002E9A95 /* StackRecipeCardView.swift in Sources */,
 				F29D07602908E8BB003634AC /* EntModel.swift in Sources */,
@@ -728,10 +751,10 @@
 				F2430A9A290901F7002E9A95 /* RecipeModelMapper.swift in Sources */,
 				F2BBC1AF2908A95F00FDAB7F /* NetworkManager.swift in Sources */,
 				F2BBC1AC2908A92000FDAB7F /* SearchRecipeParameters.swift in Sources */,
-				F29D07522908CD44003634AC /* GetRandomRecipes.swift in Sources */,
+				F29D07522908CD44003634AC /* GetRecipes.swift in Sources */,
 				F29D07552908D005003634AC /* RecipesDiscoverViewModel.swift in Sources */,
 				F2BBC1B42908AA0D00FDAB7F /* NetworkRouterProtocol.swift in Sources */,
-				F29D074E2908CCB7003634AC /* GetRandomRecipesUseCaseProtocol.swift in Sources */,
+				F29D074E2908CCB7003634AC /* GetRecipesUseCaseProtocol.swift in Sources */,
 				F29D07622908E91D003634AC /* LengthModel.swift in Sources */,
 				F2430A8F2908F8E3002E9A95 /* CircleButton.swift in Sources */,
 				F2BBC1A42908A77C00FDAB7F /* SpoonacularAPI.swift in Sources */,
@@ -740,6 +763,7 @@
 				F2BBC1AA2908A8EE00FDAB7F /* FoodApiRandomRecipesResponse.swift in Sources */,
 				F2BBC1B82908AA6400FDAB7F /* CCNetworkError.swift in Sources */,
 				F2430A9D29090288002E9A95 /* StackRecipeCardViewModel.swift in Sources */,
+				F2430AAB29092DB0002E9A95 /* FavoriteRecipesViewModel.swift in Sources */,
 				F29D07662908E9FE003634AC /* ExtendedIngredientModel.swift in Sources */,
 				F29D075A2908E0CC003634AC /* DummyFile.swift in Sources */,
 				F29D07492908C611003634AC /* RecipeRepositoryImpl.swift in Sources */,

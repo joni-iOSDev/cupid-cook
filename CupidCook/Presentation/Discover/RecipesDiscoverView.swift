@@ -10,16 +10,16 @@ import SwiftUI
 struct RecipesDiscoverView: View {
     
     @ObservedObject var viewModel: RecipesDiscoverViewModel =
-        .init(getRandomRecipesUseCase: DependencyInjectionResolver.shared.resolve(GetRandomRecipesUseCaseProtocol.self), saveRecipeUseCase: DependencyInjectionResolver.shared.resolve(SaveRecipesUseCaseProtocol.self))
+        .init(getRandomRecipesUseCase: DependencyInjectionResolver.shared.resolve(GetRecipesUseCaseProtocol.self),
+              saveRecipeUseCase: DependencyInjectionResolver.shared.resolve(SaveRecipesUseCaseProtocol.self))
     
     @State private var showingSearchRecipe = false
-    @State var swipeAction: ((Int, SwipeType) -> ())?
 
     var body: some View {
         NavigationView {
             VStack {
                 NavigationLink("Favorites") {
-                    
+                    FavoriteRecipesView()
                 }.frame(maxWidth: .infinity, alignment: .leading)
                     .overlay {
                         Text("Discover")
@@ -78,9 +78,11 @@ struct RecipesDiscoverView: View {
                     
                 }
                 .padding(.bottom)
+                // TODO: Improve the alert view with title + description
                 .alert(isPresented: $viewModel.showAlert) {
                     Alert(title: Text(viewModel.message))
                 }
+                
 
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
@@ -109,7 +111,7 @@ struct RecipesDiscoverView: View {
 
             }
         case .left:
-            print("123 Swift Left")
+            print("123 Sswipe Left")
             updateStack()
         }
     }
@@ -118,7 +120,6 @@ struct RecipesDiscoverView: View {
         guard let id = id else { return }
         Task {
             await viewModel.saveRecipe(id: id, list: .favorite)
-            updateStack()
         }
     }
     

@@ -17,7 +17,7 @@ class SaveRecipe: SaveRecipesUseCaseProtocol {
         
     func execute(recitpe: RecipeModel, list: ToList) async -> Result<Bool, DiscoverRecipeError> {
         
-        let result = (list == .favorite) ? await recipeRepository.saveToFavorite(recipe: recitpe) : await recipeRepository.saveLike(recipe: recitpe)
+        let result = (list == .favorite) ? await recipeRepository.saveFavorite(recipe: recitpe) : await recipeRepository.saveLike(recipe: recitpe)
         
         switch result {
         case .success(let success):

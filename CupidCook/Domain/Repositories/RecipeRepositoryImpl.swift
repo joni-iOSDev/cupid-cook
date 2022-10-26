@@ -10,10 +10,11 @@ import Foundation
 class RecipeRepositoryImpl: RecipeRepositoryProtocol {
 
     var networkManager: NetworkManagerProtocol
-    let localStore: TempMemoryStore = .init()
+    var localStore: TempMemoryStoreProtocol
     
-    internal init(networkManager: NetworkManagerProtocol) {
+    internal init(networkManager: NetworkManagerProtocol, store: TempMemoryStoreProtocol) {
         self.networkManager = networkManager
+        self.localStore = store
     }
     
     func getRandomRecipes() async -> Result<[RecipeModel], NetworkError> {
@@ -26,8 +27,7 @@ class RecipeRepositoryImpl: RecipeRepositoryProtocol {
         }
     }
     
-    func saveToFavorite(recipe: RecipeModel) async -> Result<Bool, NetworkError> {
-        
+    func saveFavorite(recipe: RecipeModel) async -> Result<Bool, NetworkError> {
 
         if let _ = localStore.recipeFavorites.first(where: {$0.id == recipe.id }) {
             return .failure(.diskSaveError)
@@ -39,13 +39,26 @@ class RecipeRepositoryImpl: RecipeRepositoryProtocol {
     
     func saveLike(recipe: RecipeModel) async -> Result<Bool, NetworkError> {
         
-
         if let _ = localStore.recipeLikes.first(where: {$0.id == recipe.id }) {
             return .failure(.diskSaveError)
         } else {
             localStore.recipeLikes.append(recipe)
             return .success(true)
         }
+    }
+    
+    func getLikes() async -> Result<[RecipeModel], NetworkError> {
+        if localStore.recipeLikes.isEmpty {
+            return .failure(.emptyDisk)
+        }
+        return .success(localStore.recipeLikes)
+    }
+    
+    func getFavorites() async -> Result<[RecipeModel], NetworkError> {
+        if localStore.recipeFavorites.isEmpty {
+            return .failure(.emptyDisk)
+        }
+        return .success(localStore.recipeFavorites)
     }
 
 }
