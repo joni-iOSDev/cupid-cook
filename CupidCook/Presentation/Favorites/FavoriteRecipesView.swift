@@ -44,8 +44,6 @@ struct FavoriteRecipesView: View {
                 fetchFavorites()
             }
             .navigationTitle("Favorites")
-        
-
     }
     
     private func fetchFavorites() {
