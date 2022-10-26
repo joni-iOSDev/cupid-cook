@@ -10,6 +10,7 @@ import Foundation
 class RecipeRepositoryImpl: RecipeRepositoryProtocol {
 
     var networkManager: NetworkManagerProtocol
+    let localStore: TempMemoryStore = .init()
     
     internal init(networkManager: NetworkManagerProtocol) {
         self.networkManager = networkManager
@@ -24,5 +25,28 @@ class RecipeRepositoryImpl: RecipeRepositoryProtocol {
             return .failure(failure)
         }
     }
+    
+    func saveToFavorite(recipe: RecipeModel) async -> Result<Bool, NetworkError> {
+        
+
+        if let _ = localStore.recipeFavorites.first(where: {$0.id == recipe.id }) {
+            return .failure(.diskSaveError)
+        } else {
+            localStore.recipeFavorites.append(recipe)
+            return .success(true)
+        }
+    }
+    
+    func saveLike(recipe: RecipeModel) async -> Result<Bool, NetworkError> {
+        
+
+        if let _ = localStore.recipeLikes.first(where: {$0.id == recipe.id }) {
+            return .failure(.diskSaveError)
+        } else {
+            localStore.recipeLikes.append(recipe)
+            return .success(true)
+        }
+    }
+
 }
 

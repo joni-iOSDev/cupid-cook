@@ -15,9 +15,11 @@ class RecipesDiscoverViewModel: ObservableObject {
     @Published var recipes: [RecipeModel] = []
     
     private let getRandomRecipesUseCase: GetRandomRecipesUseCaseProtocol
+    private let saveRecipesUseCase: SaveRecipesUseCaseProtocol
     
-    init(getRandomRecipesUseCase: GetRandomRecipesUseCaseProtocol) {
+    init(getRandomRecipesUseCase: GetRandomRecipesUseCaseProtocol, saveRecipeUseCase: SaveRecipesUseCaseProtocol) {
         self.getRandomRecipesUseCase = getRandomRecipesUseCase
+        self.saveRecipesUseCase = saveRecipeUseCase
     }
     
     func getIndex(recipe: RecipeModel) -> Int {
@@ -30,6 +32,28 @@ class RecipesDiscoverViewModel: ObservableObject {
         switch result {
         case .success(let success):
             recipes = success
+        case .failure(let failure):
+            showAlert = true
+            message = failure.localizedDescription
+        }
+    }
+    
+    @MainActor func saveRecipe(id: Int) async {
+        guard let recipe = recipes.first(where: { $0.id == id } ) else {
+            showAlert = true
+            message = "Ups! We had a problem"
+            return
+        }
+        
+        let result = await saveRecipesUseCase.execute(recitpe: recipe, list: .like)
+        
+        switch result {
+        case .success(let success):
+            if success {
+                // TODO: Present a message
+                print("123 Save OK")
+            }
+            
         case .failure(let failure):
             showAlert = true
             message = failure.localizedDescription

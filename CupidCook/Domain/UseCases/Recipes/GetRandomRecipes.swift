@@ -9,7 +9,6 @@ import Foundation
 
 class GetRandomRecipes: GetRandomRecipesUseCaseProtocol {
   
-
     private let recipeRepository: RecipeRepositoryProtocol
     
     init(recipeRepository: RecipeRepositoryProtocol) {

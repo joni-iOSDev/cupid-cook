@@ -86,18 +86,10 @@ struct StackRecipeCardView: View {
         withAnimation(.none) {
             endSwipe = true
         }
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            //            if let _ = viewModel.recipes.first {
-            //                let _ = withAnimation {
-            //                    viewModel.recipes.removeFirst()
-            //                }
-            //            }
-        }
     }
     
     func leftSwipe() {
-        action(cardViewMoldel.recipe.id, .right)
+        action(cardViewMoldel.recipe.id, .left)
     }
     
     func rightSwipe() {

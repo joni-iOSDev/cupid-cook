@@ -24,6 +24,9 @@ func buildContainer() -> Container {
         return GetRandomRecipes(recipeRepository: container.resolve(RecipeRepositoryProtocol.self)!)
     }
     
+    container.register(SaveRecipesUseCaseProtocol.self) { _ in
+        return SaveRecipe(recipeRepository: container.resolve(RecipeRepositoryProtocol.self)!)
+    }
     
     return container
 }

@@ -10,7 +10,8 @@ import SwiftUI
 struct RecipesDiscoverView: View {
     
     @ObservedObject var viewModel: RecipesDiscoverViewModel =
-        .init(getRandomRecipesUseCase: DependencyInjectionResolver.shared.resolve(GetRandomRecipesUseCaseProtocol.self))
+        .init(getRandomRecipesUseCase: DependencyInjectionResolver.shared.resolve(GetRandomRecipesUseCaseProtocol.self), saveRecipeUseCase: DependencyInjectionResolver.shared.resolve(SaveRecipesUseCaseProtocol.self))
+    
     @State private var showingSearchRecipe = false
     @State var swipeAction: ((Int, SwipeType) -> ())?
 
@@ -71,7 +72,7 @@ struct RecipesDiscoverView: View {
                 }
                 .padding(.bottom)
                 .alert(isPresented: $viewModel.showAlert) {
-                    Alert(title: Text("Ups there was an error"))
+                    Alert(title: Text(viewModel.message))
                 }
 
             }
@@ -92,7 +93,16 @@ struct RecipesDiscoverView: View {
     }
     
     private func actionSwipe(id: Int, swipe: SwipeType) {
-        updateStack()
+        switch swipe {
+        case .right:
+            Task {
+                await viewModel.saveRecipe(id: id)
+                updateStack()
+
+            }
+        case .left:
+            print("123 Swift Left")
+        }
     }
     
     private func updateStack() {
