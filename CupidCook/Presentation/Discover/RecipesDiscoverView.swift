@@ -55,19 +55,26 @@ struct RecipesDiscoverView: View {
                                  color: Color.gray,
                                  sizeByPriority: .low) {
                         showingSearchRecipe.toggle()
-                    }.sheet(isPresented: $showingSearchRecipe, content: SearchRecipe)
+                    }.sheet(isPresented: $showingSearchRecipe,
+                            content: SearchRecipe)
                     
                     CircleButton(name: Constant.unLinke,
                                  color: Color.pink,
-                                 sizeByPriority: .medium) {  }
+                                 sizeByPriority: .medium) {
+                        actionSwipe(id: viewModel.recipes.first!.id, swipe: .left)
+                    }
                     
                     CircleButton(name: Constant.favorite,
                                  color: Color.yellow,
-                                 sizeByPriority: .low) {  }
+                                 sizeByPriority: .low) {
+                        saveToFavorite(id: viewModel.recipes.first?.id)
+                    }
                     
                     CircleButton(name: Constant.like,
                                  color: Color.green,
-                                 sizeByPriority: .high) { }
+                                 sizeByPriority: .high) {
+                        actionSwipe(id: viewModel.recipes.first?.id, swipe: .right)
+                    }
                     
                 }
                 .padding(.bottom)
@@ -92,16 +99,26 @@ struct RecipesDiscoverView: View {
         return SearchRecipeView()
     }
     
-    private func actionSwipe(id: Int, swipe: SwipeType) {
+    private func actionSwipe(id: Int?, swipe: SwipeType) {
+        guard let id = id else { return }
         switch swipe {
         case .right:
             Task {
-                await viewModel.saveRecipe(id: id)
+                await viewModel.saveRecipe(id: id, list: .like)
                 updateStack()
 
             }
         case .left:
             print("123 Swift Left")
+            updateStack()
+        }
+    }
+    
+    private func saveToFavorite(id: Int?) {
+        guard let id = id else { return }
+        Task {
+            await viewModel.saveRecipe(id: id, list: .favorite)
+            updateStack()
         }
     }
     

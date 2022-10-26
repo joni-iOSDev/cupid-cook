@@ -38,14 +38,14 @@ class RecipesDiscoverViewModel: ObservableObject {
         }
     }
     
-    @MainActor func saveRecipe(id: Int) async {
+    @MainActor func saveRecipe(id: Int, list: ToList) async {
         guard let recipe = recipes.first(where: { $0.id == id } ) else {
             showAlert = true
             message = "Ups! We had a problem"
             return
         }
         
-        let result = await saveRecipesUseCase.execute(recitpe: recipe, list: .like)
+        let result = await saveRecipesUseCase.execute(recitpe: recipe, list: list)
         
         switch result {
         case .success(let success):
