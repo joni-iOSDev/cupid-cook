@@ -31,8 +31,6 @@ final class CupidCookTests: XCTestCase {
         let similarRecipes: SpoonacularAPI = .similarRecipes("123")
         XCTAssertTrue(similarRecipes.path == "/recipes/123/similar")
         XCTAssertTrue(similarRecipes.httpMethod == .get)
-
-        
     }
 
 }
