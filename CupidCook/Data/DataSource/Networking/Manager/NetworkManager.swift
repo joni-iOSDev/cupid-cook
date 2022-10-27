@@ -19,7 +19,7 @@ struct NetworkManager: NetworkManagerProtocol {
     
     private let routerFoodAPI = Router<SpoonacularAPI>()
 
-    static let environment: NetworkEnvironment = .production
+    static let environment: NetworkEnvironment = .mock
     
     func getRandomRecipies(with params: RandomRecipesParameters = .init()
                            ,_ completionHandler: @escaping (Result<[RecipeModel]?, NetworkError>) -> Void) {
