@@ -27,8 +27,17 @@ public enum SpoonacularAPI {
 
 extension SpoonacularAPI: EndPointType {
     
+    var environment: NetworkEnvironment {
+
+        #if RELEASE
+            return .production
+        #endif
+        
+            return .mock
+    }
+    
     var baseURL: String {
-        switch NetworkManager.environment {
+        switch environment {
         case .qa: return "http://localhost:3000"
         case .production: return "https://api.spoonacular.com"
         case .mock: return "http://localhost:3000"
