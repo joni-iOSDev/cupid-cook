@@ -31,7 +31,7 @@ class RecipesDiscoverViewModel: ObservableObject {
         
         switch result {
         case .success(let success):
-            recipes = success
+            recipes.append(contentsOf: success)
         case .failure(let failure):
             showAlert = true
             message = failure.rawValue

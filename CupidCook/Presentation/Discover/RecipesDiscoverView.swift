@@ -14,18 +14,28 @@ struct RecipesDiscoverView: View {
               saveRecipeUseCase: DependencyInjectionResolver.shared.resolve(SaveRecipesUseCaseProtocol.self))
     
     @State private var showingSearchRecipe = false
-
+    
     var body: some View {
         NavigationView {
             VStack {
-                NavigationLink("Favorites") {
-                    FavoriteRecipesView()
-                }.frame(maxWidth: .infinity, alignment: .leading)
-                    .overlay {
-                        Text("Discover")
-                            .font(.title.bold())
-                    }
-                    .padding()
+                HStack {
+                    NavigationLink("Favorites") {
+                        FavoriteRecipesView()
+                    }.frame(maxWidth: .infinity, alignment: .leading)
+                    
+                    NavigationLink {
+                        DiscoverRecipesSettingView()
+                    } label: {
+                        Image(systemName: "gear")
+                    }.frame(maxWidth: .infinity, alignment: .trailing)
+
+                    
+                }.overlay {
+                    Text("Discover")
+                        .font(.title.bold())
+                }
+                .padding()
+                
                 
                 ZStack {
                     if viewModel.recipes.isEmpty {
@@ -35,14 +45,23 @@ struct RecipesDiscoverView: View {
                         }
                     } else {
                         ForEach(viewModel.recipes.reversed(), id: \.self) { recipe in
-                            
-                            StackRecipeCardView(action: { id, swipe in
-                                print("123 swipe")
-                                actionSwipe(id: id, swipe: swipe)
-
-                            }, cardViewMoldel:
-                                    .init(recipe: recipe,
-                                          currentIndex: viewModel.getIndex(recipe: recipe)))
+                            VStack {
+                                StackRecipeCardView(action: { id, swipe in
+                                    print("123 swipe")
+                                    actionSwipe(id: id, swipe: swipe)
+                                    
+                                }, cardViewMoldel:
+                                        .init(recipe: recipe,
+                                              currentIndex: viewModel.getIndex(recipe: recipe)))
+                                if let firstId = viewModel.recipes.first?.id, recipe.id == firstId {
+                                    withAnimation {
+                                        Text(recipe.title ?? "")
+                                            .font(.title2)
+                                            .frame(maxWidth: .infinity, alignment: .leading)
+                                            .padding(.leading, 20)
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -50,7 +69,7 @@ struct RecipesDiscoverView: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 // MARK: - Buttons
                 HStack(spacing: 15) {
-
+                    
                     CircleButton(name: Constant.search,
                                  color: Color.gray,
                                  sizeByPriority: .low) {
@@ -82,8 +101,6 @@ struct RecipesDiscoverView: View {
                 .alert(isPresented: $viewModel.showAlert) {
                     Alert(title: Text(viewModel.message))
                 }
-                
-
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
             .onAppear {
@@ -108,7 +125,7 @@ struct RecipesDiscoverView: View {
             Task {
                 await viewModel.saveRecipe(id: id, list: .like)
                 updateStack()
-
+                
             }
         case .left:
             print("123 Sswipe Left")
@@ -127,6 +144,12 @@ struct RecipesDiscoverView: View {
         if let _ = viewModel.recipes.reversed().first {
             let _ = withAnimation {
                 viewModel.recipes.removeFirst()
+            }
+        }
+        
+        if viewModel.recipes.count < 5 {
+            Task {
+                await viewModel.getRandomRecipes()
             }
         }
     }
